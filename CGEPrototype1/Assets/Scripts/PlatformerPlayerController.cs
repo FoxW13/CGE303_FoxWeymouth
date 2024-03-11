@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlatformerPlayerController : MonoBehaviour
 {
+    public AudioClip jumpSound;
+    private AudioSource playerAudio;
+
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public LayerMask groundLayer;
@@ -18,6 +21,9 @@ public class PlatformerPlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        playerAudio = GetComponent<AudioSource>();
+
         rb = GetComponent<Rigidbody2D>();
 
         if (groundCheck == null)
@@ -35,8 +41,9 @@ public class PlatformerPlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
-        
+
     }
 
     void FixedUpdate()

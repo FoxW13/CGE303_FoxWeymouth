@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3472250413190638283}
   - component: {fileID: 3472250413190638284}
   - component: {fileID: 3472250413190638285}
-  - component: {fileID: 3472250413190638286}
+  - component: {fileID: 4959711284260586134}
   m_Layer: 0
   m_Name: ScoreTriggerZone
   m_TagString: Untagged
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3472250413190638286
+--- !u!114 &4959711284260586134
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,6 +119,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3472250413190638287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d49bd5fc3675c547beb965bb52094b0, type: 3}
+  m_Script: {fileID: 11500000, guid: b9402d86b451b8448986ebbd801cb0f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
