@@ -7,6 +7,9 @@ public class ScoreTriggerZone : MonoBehaviour
 
     bool active = true;
 
+    public AudioClip triggerNoise;
+    private AudioSource playerAudio;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +18,12 @@ public class ScoreTriggerZone : MonoBehaviour
         {
             active = false;
             ScoreManager.score++;
+            playerAudio.PlayOneShot(triggerNoise, 1.0F);
         }
+    }
+
+    void Start()
+    {
+        playerAudio = GetComponent<AudioSource>();
     }
 }
